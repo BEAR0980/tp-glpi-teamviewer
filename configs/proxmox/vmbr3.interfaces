@@ -1,0 +1,19 @@
+# Extrait de /etc/network/interfaces sur l'hôte Proxmox VE
+#
+# vmbr3 = bridge interne du labo GLPI (commentaire « LAN_GLPI »).
+# Pas de port physique (bridge-ports none) et pas d'IP sur l'hôte :
+# seules les VM branchées dessus se voient. La seule sortie est la carte
+# ens21 du firewall (10.50.0.254).
+#
+# Branché sur vmbr3 : firewall (net3 -> ens21), serveur GLPI (net0 -> ens18),
+# PC-ADMIN et PC-CLIENT.
+#
+# Créé depuis l'interface : Datacenter > <nœud> > Système > Réseau >
+# Créer > Linux Bridge, puis « Appliquer la configuration ».
+
+auto vmbr3
+iface vmbr3 inet manual
+	bridge-ports none
+	bridge-stp off
+	bridge-fd 0
+#LAN_GLPI

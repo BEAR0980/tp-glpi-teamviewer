@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="440" viewBox="0 0 1200 440" xmlns="http://www.w3.org/2000/svg">
+  <style>text{font-family:Arial,Helvetica,sans-serif}</style>
+  <defs>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1B3A6B"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="440" fill="#fff"/>
+  <!-- acteurs -->
+  <rect x="60" y="16" width="300" height="56" rx="8" fill="#2E75B6"/>
+  <text x="210" y="42" text-anchor="middle" font-size="18" font-weight="bold" fill="#fff">GLPI Agent (poste Windows)</text>
+  <text x="210" y="62" text-anchor="middle" font-size="13" fill="#D6E4F0">service glpi-agent · port 62354</text>
+  <rect x="860" y="16" width="260" height="56" rx="8" fill="#1B3A6B"/>
+  <text x="990" y="42" text-anchor="middle" font-size="18" font-weight="bold" fill="#fff">Serveur GLPI</text>
+  <text x="990" y="62" text-anchor="middle" font-size="13" fill="#D6E4F0">10.50.0.10 · /front/inventory.php</text>
+  <line x1="210" y1="72" x2="210" y2="430" stroke="#B0BEC5" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="990" y1="72" x2="990" y2="430" stroke="#B0BEC5" stroke-width="2" stroke-dasharray="6 5"/>
+
+  <!-- déclencheur -->
+  <rect x="40" y="86" width="340" height="66" rx="6" fill="#FFF8E1" stroke="#FFCA2C" stroke-width="1.5"/>
+  <text x="210" y="113" text-anchor="middle" font-size="13" fill="#856404">déclenché à intervalle régulier, ou tout de suite</text>
+  <text x="210" y="137" text-anchor="middle" font-size="13" fill="#856404">par « Force an Inventory » sur http://localhost:62354</text>
+
+  <!-- 1 -->
+  <line x1="214" y1="185" x2="984" y2="185" stroke="#1B3A6B" stroke-width="3" marker-end="url(#ar2)"/>
+  <circle cx="600" cy="185" r="20" fill="#FFCA2C"/><text x="600" y="192" text-anchor="middle" font-size="20" font-weight="bold" fill="#1B3A6B">1</text>
+  <text x="600" y="225" text-anchor="middle" font-size="15" fill="#1B3A6B"><tspan font-weight="bold">PROLOG</tspan> : « C'est client-2026-10-20-13-20-26, je fais quoi ? »</text>
+  <!-- 2 -->
+  <line x1="986" y1="260" x2="216" y2="260" stroke="#1B3A6B" stroke-width="3" marker-end="url(#ar2)"/>
+  <circle cx="600" cy="260" r="20" fill="#FFCA2C"/><text x="600" y="267" text-anchor="middle" font-size="20" font-weight="bold" fill="#1B3A6B">2</text>
+  <text x="600" y="300" text-anchor="middle" font-size="15" fill="#1B3A6B"><tspan font-weight="bold">RÉPONSE</tspan> : « Inventaire activé, envoie-moi tout »</text>
+  <!-- 3 -->
+  <line x1="214" y1="335" x2="984" y2="335" stroke="#1B3A6B" stroke-width="3" marker-end="url(#ar2)"/>
+  <circle cx="600" cy="335" r="20" fill="#FFCA2C"/><text x="600" y="342" text-anchor="middle" font-size="20" font-weight="bold" fill="#1B3A6B">3</text>
+  <text x="600" y="375" text-anchor="middle" font-size="15" fill="#1B3A6B"><tspan font-weight="bold">INVENTAIRE</tspan> (HTTP POST) : système, CPU, RAM, disques, réseau, logiciels</text>
+  <!-- 4 -->
+  <rect x="815" y="395" width="350" height="38" rx="6" fill="#EEF3F9" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="990" y="419" text-anchor="middle" font-size="13" fill="#1B3A6B"><tspan font-weight="bold">4</tspan> · règles d'import : fiche créée ou mise à jour</text>
+</svg>

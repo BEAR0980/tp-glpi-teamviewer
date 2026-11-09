@@ -1,0 +1,21 @@
+# /etc/network/interfaces — serveur GLPI (Debian 13)
+#
+# Le serveur doit garder la même adresse : c'est elle que les agents GLPI
+# des postes Windows contactent. Une IP en DHCP qui change = plus aucun
+# inventaire ne remonte.
+#
+# ens18 = net0 de la VM Proxmox, branchée sur vmbr3 (segment 10.50.0.0/24).
+# La passerelle 10.50.0.254 est l'interface ens21 du firewall.
+
+source /etc/network/interfaces.d/*
+
+auto lo
+iface lo inet loopback
+
+auto ens18
+iface ens18 inet static
+    address 10.50.0.10/24
+    gateway 10.50.0.254
+
+# Le DNS est déclaré dans /etc/resolv.conf (voir resolv.conf à côté).
+# Appliquer : systemctl restart networking

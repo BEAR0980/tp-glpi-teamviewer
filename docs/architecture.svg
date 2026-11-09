@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="680" viewBox="0 0 1200 680" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2E75B6"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="680" fill="#ffffff"/>
+  <style>text{font-family:Arial,Helvetica,sans-serif}</style>
+
+  <!-- Internet -->
+  <rect x="440" y="14" width="320" height="58" rx="29" fill="#EEF3F9" stroke="#2E75B6" stroke-width="2"/>
+  <text x="600" y="40" text-anchor="middle" font-size="20" font-weight="bold" fill="#1B3A6B">Internet</text>
+  <text x="600" y="61" text-anchor="middle" font-size="14" fill="#595959">apt, GitHub (GLPI, agent), TeamViewer</text>
+
+  <!-- WAN -->
+  <line x1="600" y1="72" x2="600" y2="104" stroke="#2E75B6" stroke-width="3"/>
+  <rect x="330" y="104" width="540" height="44" rx="6" fill="#D6E4F0" stroke="#2E75B6" stroke-width="1.5"/>
+  <text x="600" y="132" text-anchor="middle" font-size="16" fill="#1B3A6B"><tspan font-weight="bold">WAN</tspan> · réseau de l'école (adressage masqué) · vmbr0</text>
+
+  <!-- Firewall -->
+  <line x1="600" y1="148" x2="600" y2="182" stroke="#2E75B6" stroke-width="3"/>
+  <rect x="380" y="182" width="440" height="118" rx="10" fill="#1B3A6B"/>
+  <text x="600" y="212" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">FIREWALL · Rocky Linux (iptables)</text>
+  <text x="600" y="238" text-anchor="middle" font-size="14" fill="#D6E4F0">ens18 WAN x.x.x.x · ens21 GLPI 10.50.0.254</text>
+  <text x="600" y="258" text-anchor="middle" font-size="14" fill="#D6E4F0">ens19 DMZ 192.168.10.254 · ens20 LAN 10.20.30.254</text>
+  <text x="600" y="284" text-anchor="middle" font-size="14" font-style="italic" fill="#FFCA2C">routage + NAT vers Internet</text>
+
+  <!-- autres zones (grisées) -->
+  <line x1="380" y1="240" x2="250" y2="240" stroke="#9E9E9E" stroke-width="2" stroke-dasharray="6 5"/>
+  <rect x="30" y="200" width="220" height="80" rx="8" fill="#F5F5F5" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="140" y="228" text-anchor="middle" font-size="15" font-weight="bold" fill="#595959">DMZ · vmbr1</text>
+  <text x="140" y="248" text-anchor="middle" font-size="15" font-weight="bold" fill="#595959">LAN · vmbr2</text>
+  <text x="140" y="268" text-anchor="middle" font-size="13" font-style="italic" fill="#757575">autres TP, non utilisés ici</text>
+
+  <!-- Segment GLPI -->
+  <line x1="600" y1="300" x2="600" y2="346" stroke="#2E75B6" stroke-width="3"/>
+  <rect x="20" y="346" width="1160" height="318" rx="12" fill="#F0F5FA" stroke="#2E75B6" stroke-width="2"/>
+  <text x="40" y="374" font-size="18" font-weight="bold" fill="#1B3A6B">Segment GLPI · vmbr3 · 10.50.0.0/24</text>
+  <text x="1160" y="374" text-anchor="end" font-size="14" fill="#595959">passerelle 10.50.0.254 · DNS 1.1.1.1</text>
+
+  <!-- switch bar -->
+  <rect x="50" y="392" width="1100" height="10" rx="5" fill="#2E75B6"/>
+  <line x1="200" y1="402" x2="200" y2="430" stroke="#2E75B6" stroke-width="3"/>
+  <line x1="600" y1="402" x2="600" y2="430" stroke="#2E75B6" stroke-width="3"/>
+  <line x1="1000" y1="402" x2="1000" y2="430" stroke="#2E75B6" stroke-width="3"/>
+
+  <!-- PC-ADMIN -->
+  <rect x="80" y="430" width="240" height="160" rx="10" fill="#ffffff" stroke="#2E75B6" stroke-width="2"/>
+  <text x="200" y="458" text-anchor="middle" font-size="16" font-weight="bold" fill="#1B3A6B">PC-ADMIN</text>
+  <text x="200" y="482" text-anchor="middle" font-size="16" font-weight="bold" fill="#1B3A6B">10.50.0.20</text>
+  <text x="200" y="504" text-anchor="middle" font-size="13" fill="#595959">Windows · poste du technicien</text>
+  <rect x="112" y="518" width="176" height="26" rx="13" fill="#D6E4F0"/>
+  <text x="200" y="536" text-anchor="middle" font-size="13" font-weight="bold" fill="#1B3A6B">GLPI Agent 1.21</text>
+  <rect x="112" y="550" width="176" height="26" rx="13" fill="#D6E4F0"/>
+  <text x="200" y="568" text-anchor="middle" font-size="13" font-weight="bold" fill="#1B3A6B">TeamViewer</text>
+
+  <!-- serveur GLPI -->
+  <rect x="470" y="430" width="260" height="178" rx="10" fill="#ffffff" stroke="#1B3A6B" stroke-width="3"/>
+  <rect x="470" y="430" width="260" height="40" rx="10" fill="#1B3A6B"/>
+  <rect x="470" y="455" width="260" height="15" fill="#1B3A6B"/>
+  <text x="600" y="456" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Serveur GLPI</text>
+  <text x="600" y="496" text-anchor="middle" font-size="16" font-weight="bold" fill="#1B3A6B">10.50.0.10</text>
+  <text x="600" y="518" text-anchor="middle" font-size="13" fill="#595959">Debian 13 · IP fixe</text>
+  <rect x="497" y="530" width="206" height="28" rx="14" fill="#2E75B6"/>
+  <text x="600" y="549" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">Apache 2 · PHP 8.4 · 80/tcp</text>
+  <rect x="497" y="566" width="206" height="28" rx="14" fill="#2E75B6"/>
+  <text x="600" y="585" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">GLPI 12.0.0 · MariaDB</text>
+
+  <!-- PC-CLIENT -->
+  <rect x="880" y="430" width="240" height="160" rx="10" fill="#ffffff" stroke="#2E75B6" stroke-width="2"/>
+  <text x="1000" y="458" text-anchor="middle" font-size="16" font-weight="bold" fill="#1B3A6B">PC-CLIENT</text>
+  <text x="1000" y="482" text-anchor="middle" font-size="16" font-weight="bold" fill="#1B3A6B">10.50.0.30</text>
+  <text x="1000" y="504" text-anchor="middle" font-size="13" fill="#595959">Windows · poste utilisateur</text>
+  <rect x="912" y="518" width="176" height="26" rx="13" fill="#D6E4F0"/>
+  <text x="1000" y="536" text-anchor="middle" font-size="13" font-weight="bold" fill="#1B3A6B">GLPI Agent 1.21</text>
+  <rect x="912" y="550" width="176" height="26" rx="13" fill="#D6E4F0"/>
+  <text x="1000" y="568" text-anchor="middle" font-size="13" font-weight="bold" fill="#1B3A6B">TeamViewer</text>
+
+  <!-- flux d'inventaire -->
+  <path d="M200,590 C 220,640 380,640 468,600" fill="none" stroke="#FFCA2C" stroke-width="3" marker-end="url(#ar)"/>
+  <path d="M1000,590 C 980,640 820,640 732,600" fill="none" stroke="#FFCA2C" stroke-width="3" marker-end="url(#ar)"/>
+  <text x="600" y="648" text-anchor="middle" font-size="13" font-weight="bold" fill="#856404">inventaire : HTTP 80 vers /front/inventory.php</text>
+</svg>
